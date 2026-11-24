@@ -1,5 +1,5 @@
 
-class Queue {
+export class PriorityQueue {
     #first = 0;
     #last = 0;
     #count = 0;
@@ -7,8 +7,7 @@ class Queue {
     #arraySize;
 
     /**
-     * A queue based on a circular array stored in the variable #data .
-     * 
+     * A queue based on a circular array stored in the variable #data.
      * @param {number} maxNumItems - Maximum number of items that the queue can hold.
      */
     constructor(maxNumItems) {
@@ -24,7 +23,7 @@ class Queue {
      */
     enqueue(item) {
         if (this.#count === this.#arraySize){
-            throw new Error("Queue is full");
+            throw new Error("PriorityQueue is full");
         }
         this.#data[this.#last] = item;
         this.#last += 1;

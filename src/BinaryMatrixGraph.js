@@ -1,5 +1,5 @@
 
-class BinaryMatrixGraph {
+export class BinaryMatrixGraph {
 
     #arr; 
     #numRows; 

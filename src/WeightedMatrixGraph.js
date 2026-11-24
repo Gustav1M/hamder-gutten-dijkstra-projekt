@@ -1,5 +1,5 @@
 
-class BinaryMatrixGraph {
+export class WeightedMatrixGraph {
 
     #arr; 
     #numRows; 
@@ -36,16 +36,8 @@ class BinaryMatrixGraph {
      * @returns {number[][]} - an array of nodes in the form of two-element arrays
      */
     neighbors(n) {
-        let neighbors_to_n = [];
-        let negihbors_pos = [[-1,0],[1,0],[0,-1],[0,1]];
-
-        for (let i = 0; i < negihbors_pos.length; i++) {
-            let neighbor = [n[0] + negihbors_pos[i][0], n[1] + negihbors_pos[i][1]];
-            if (this.inBounds(neighbor) && this.valueAt(neighbor) === 0) {
-                neighbors_to_n.push(neighbor);
-            }
-        }
-        return neighbors_to_n
+        // Implementér denne metode
+        // ...
     }
 
     identicalNodes(n,m) {

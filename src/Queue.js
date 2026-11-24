@@ -1,5 +1,5 @@
 
-class Queue {
+export class Queue {
     #first = 0;
     #last = 0;
     #count = 0;
