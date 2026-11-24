@@ -1,5 +1,5 @@
 
-export class Queue {
+class Queue {
     #first = 0;
     #last = 0;
     #count = 0;
@@ -16,16 +16,20 @@ export class Queue {
         this.#arraySize = maxNumItems;
     }
 
-    
     /**
      * Adds item to the queue.
-     * Throws an error if the queue is full
+     * Throws an error if the queue is full [Done]
      * @template Item - Can be any type
      * @param {Item} item - The item to be enqueued
      */
     enqueue(item) {
-        // Implementér denne metode
-        // ...
+        if (this.#count === this.#arraySize){
+            throw new Error("Queue is full");
+        }
+        this.#data[this.#last] = item;
+        this.#last += 1;
+        this.#last %= this.#arraySize;
+        this.#count += 1;
     }
 
     dequeue() {
